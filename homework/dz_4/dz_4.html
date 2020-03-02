@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+    <title>Homework 4</title>
+</head>
+<body>
+    <section>
+        <p>
+            Task 1.<br>
+            Создайте класс Man, класс должен описывать человека и содержать свойства name, age, passport, sex. Создайте на его основе объект man. Выведите объект в консоль.</p>
+    </section>
+    <section>
+        <p>
+            Task 2.<br>
+            Создайте класс Employer, который будет наследоваться от Man. Класс должен содержать поля create - дату начала работы, salary. Создайте объект employer на основе Employer. Заполните поля, выведите в консоль.</p>
+    </section>
+    <section>
+        <p>
+            Task 3.<br>
+            Добавьте в класс Man метод render, который будет выводить все поля объекта созданного на основе класса Man (параграфами).</p>
+    </section>
+    <section>
+        <p>
+            Task 4.<br>
+            Примените метод render к man и выведите его содержимое в .out-1.</p>
+            <div class="out-1"></div>
+    </section>
+    <section>
+        <p>
+            Task 5.<br>
+            Примените метод render к employer и выведите его содержимое в .out-2. Как видите поля create, salary не выводятся.</p>
+            <div class="out-2"></div>
+    </section>
+    </section>
+    <section>
+        <p>
+            Task 6.<br>
+            Поскольку у Employer метод render не выводит все новые поля, то их желательно добавить. Вначале сделаем в лоб - просто создайте метод render еще раз в Employer (скопируйте его из Man) и добавьте в "лоб" новые поля. Убедитесь что метод работает.</p>
+    </section>
+    </section>
+    <section>
+        <p>
+            Task 7.<br>
+            Но, перезаписывать методы - идея так себе, в чем тогда смысл наследования? Давайте попробуем дополнить метод. Закомментируйте метод render в Employer. Теперь напишите:
+
+render(x) {
+    super.render(x); 
+    а здесь будет ваш код, который довыводит новые поля в объект x
+  }
+Как видно, super позволяет обращаться к методам класса родителя!</p>
+    </section>
+    </section>
+    <section>
+        <p>
+            Task 8.<br>
+            Создайте для Employer геттер для получения имени клиента. Само свойство name, переделайте в _name. Продемонстрируйте работу.</p>
+    </section>
+    </section>
+    <section>
+        <p>
+            Task 9.<br>
+            Создайте для Employer сеттер для сохранения имени клиента в свойство _name. Сеттер должен проверять имя на строку, обрезать пробелы. Продемонстрируйте работу.</p>
+    </section>
+    <script src="Man.js"></script>
+    <script src="Employer.js"></script>
+    <!-- <script src="Header.js"></script> -->
+</body>
+</html>
