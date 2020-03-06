@@ -1,0 +1,149 @@
+header {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 61px;
+    background-color: #02918c;
+    z-index: 8;
+  }
+  
+  header .logo {
+    font-family: sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.75;
+    color: #cfc91d;
+    margin-left: 51px;
+  }
+  
+  header .logo span {
+    color: #ffffff;
+  }
+  
+  header nav {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 61px;
+    margin-right: 20px;
+  }
+  
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
+  }
+  
+  header nav ul li {
+    margin-right: 50px;
+  }
+  
+  header nav ul li a {
+    display: block;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  
+  header nav ul li a:hover {
+    color: #4d4d4d;
+  }
+  
+  header nav #menu__toggle,
+  header nav .menu__btn {
+    display: none;
+  }
+  
+  @media (max-width: 900px) {
+    header nav .menu {
+      position: fixed;
+      top: 0;
+      right: -350px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      background-color: whitesmoke;
+      -webkit-transition: .5s;
+      transition: .5s;
+    }
+    header nav .menu li {
+      margin-left: -40px;
+    }
+    header nav .menu li:hover {
+      background-color: gainsboro;
+    }
+    header nav .menu li a {
+      padding: 0 70px;
+      color: black;
+      font-size: 15px;
+    }
+    header nav .menu__btn {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      display: block;
+      cursor: pointer;
+      z-index: 9;
+    }
+    header nav .menu__btn::before, header nav .menu__btn::after {
+      content: " ";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: #cfc91d;
+      -webkit-transition: .25s;
+      transition: .25s;
+    }
+    header nav .menu__btn::after {
+      top: -7px;
+    }
+    header nav .menu__btn::before {
+      top: 7px;
+    }
+    header nav .menu__btn span {
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: #cfc91d;
+      -webkit-transition: .25s;
+      transition: .25s;
+    }
+    header nav #menu__toggle:checked + .menu__btn::before {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      top: 0;
+    }
+    header nav #menu__toggle:checked + .menu__btn::after {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      top: 0;
+    }
+    header nav #menu__toggle:checked + .menu__btn span {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    header nav #menu__toggle:checked + .menu__btn + .menu {
+      right: 0;
+    }
+  }
+  

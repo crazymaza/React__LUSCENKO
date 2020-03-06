@@ -1,0 +1,15 @@
+footer {
+    height: 79px;
+    text-align: center;
+    line-height: 79px;
+    background-color: #000000;
+  }
+  
+  footer a {
+    color: #252525;
+  }
+  
+  footer a:hover {
+    color: #585858;
+  }
+  
