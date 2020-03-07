@@ -12,7 +12,7 @@ class Header extends React.Component {
                         <span></span>
                     </label>
                     <ul className="menu">
-                        <li><a href="#">home</a></li>
+                        <li><a href="#home">home</a></li>
                         <li><a href="#about-me">about ME</a></li>
                         <li><a href="#services">services</a></li>
                         <li><a href="#mywork">MY work</a></li>

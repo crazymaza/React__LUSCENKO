@@ -19,5 +19,6 @@ class Header {
 	}
 }
 
-const header = new Header('This is header!');
+const header = new Header('This is header!', 'g1', 'df', 'dfsdf', [1,2,3,4,5,6]);
+console.log(header);
 header.render();

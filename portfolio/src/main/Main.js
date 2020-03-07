@@ -1,11 +1,15 @@
 import React from 'react';
+import mainImg from './main-header.jpg';
+import servicesImg from './services-img.jpg';
 import './Main.css';
 
 class Main extends React.Component {
     render() {
         return (
             <main>
-                <section className="first" style={{backgroundImage: "url('main-header.jpg')"}}>
+                <section className="first" style={{
+                    backgroundImage: `url(${mainImg})`
+                }}>
                     <div className="first-text">
                         <h3>Lorem ipsum dolor sit iusmod tempor</h3>
                         <h1>incididunt bore</h1>
@@ -82,7 +86,11 @@ class Main extends React.Component {
                                     et dolorerserss eerhfre mag.</p>
                             </div>
                         </div>
-                        <img src="services-img.jpg" alt="" className="services-img" />
+                        <img src={servicesImg} className="services-img" alt="work-image" style={{
+                            gridArea: 'img',
+                            width: '100%',
+                            height: '100%',
+                        }} />
                     </section>
                 </div>
                 <section className="mywork" id="mywork">
