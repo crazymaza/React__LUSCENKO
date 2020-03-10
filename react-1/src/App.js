@@ -6,6 +6,7 @@ class App extends React.Component {
 		this.state = {
 			text: '',
 			count: 0,
+			color: 'green',
 		}
 	}
 
@@ -21,6 +22,15 @@ class App extends React.Component {
 		this.setState({count: 0});
 	}
 
+	onMouseMoveFunc = () => {
+		console.log('move');
+		
+	};
+
+	showAtr = (e) => {
+		console.log(e.target.getAttribute('data'));	
+	};
+
 	render() {
 		return (
 			<div>
@@ -29,6 +39,12 @@ class App extends React.Component {
 				<button onClick={this.countUp}>Count</button>
 				<p>{this.state.count}</p>
 				<button onClick={this.resetCount}>ResetCount</button>
+				<div 
+					style={{backgroundColor: this.state.color, width: '100px', height: '100px'}}
+					onMouseMove={this.onMouseMoveFunc}
+				></div>
+				<button data='atr-1' onClick={this.showAtr}>atr1</button>
+				<button data='atr-2' onClick={this.showAtr}>atr2</button>
 			</div>
 		);
 	}
