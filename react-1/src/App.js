@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './logo.svg';
 
 class App extends React.Component {
 	constructor(props) {
@@ -12,6 +13,8 @@ class App extends React.Component {
 			radioValue: '',
 			optionsValue: '',
 			width: 100,
+			rangeValue: '',
+			imgDisplay: 'block',
 		}
 	}
 
@@ -83,12 +86,24 @@ class App extends React.Component {
 	};
 
 	//13
+	showRange =(e) => {
+		this.setState({rangeValue: e.target.value});
+	};
 
+	//14
+	hidenImage = () => {
+		this.setState((state) => {
+			return state.imgDisplay === 'none' ? 
+			{imgDisplay: state.imgDisplay = 'block'} :
+			{imgDisplay: state.imgDisplay = 'none'};
+		})
+	}
 
 	render() {
 		const divStyle = {
 			paddingLeft: '20px',
 			paddingTop: '10px',
+			paddingBottom: '10px',
 		};
 
 		const divElemStyle = {
@@ -130,6 +145,19 @@ class App extends React.Component {
 					style={{height: '100px', width: this.state.width + 'px', backgroundColor: 'blue'}}
 				/>
 				<button onClick={this.divWidthUp}>Width UP</button>
+				<input type = {'range'} 
+					min = {'0'} 
+					max = {'20'} 
+					step = {'1'} 
+					defaultValue = {'10'} 
+					onChange = {this.showRange} />
+					<p>{this.state.rangeValue}</p>
+					<img 
+						style={{display: this.state.imgDisplay, width: '100px', height: '100px'}}
+						src={logo} 
+						alt='React logo'
+					 />
+					<button onClick={this.hidenImage} >Hide image</button>
 			</div>
 		);
 	}
