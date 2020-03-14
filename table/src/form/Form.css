@@ -1,0 +1,41 @@
+form {
+  margin-bottom: 10px;
+}
+
+input[type=text],
+input[type=number],
+input[type=range],
+textarea,
+select {
+  margin-bottom: 10px;
+  padding: 2px 5px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  outline-color: yellow;
+}
+
+input[type=text],
+input[type=number],
+select {
+  width: 225px;
+  height: 30px;
+}
+
+input[type=range] {
+  width: 225px;
+}
+
+input[type=submit] {
+  width: 150px;
+  height: 30px;
+
+  font-size: 18px;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type=submit]:hover {
+  background-color: #363e51;
+  color: cornsilk;
+}

@@ -5,7 +5,7 @@
 // заполните данными. Выведите в консоль. Все классы подключать отдельным файлом.
 
 // Добавьте в предыдущий класс Car метод render - который отрисовывает данные об объекте в указанный блок на
-// странице. Для оформления выберите CSS https://mustard-ui.com/ и стиль оформления pricing table.
+// странице. Для оформления выберите CSS https://mustard-ui.com/ и стиль оформления pricing form.
 // Используя класс Car создайте несколько объектов на основе класса Car. Выведите созданные объекты на страницу.
 class Car {
 	constructor(brand, name, weight, fuel_type, color, img) {
@@ -18,7 +18,7 @@ class Car {
 	}
 
 	render() {
-		document.querySelector('.pricing-table').innerHTML += `<div class="package">
+		document.querySelector('.pricing-form').innerHTML += `<div class="package">
 				<ul class="features">
 					<li>Brand: ${this.brand}</li>
 					<li>Model: ${this.name}</li>

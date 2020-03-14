@@ -39,7 +39,7 @@ class App extends React.Component {
 	//4
 	resetCount = () => {
 		this.setState({count: 0});
-	}
+	};
 
 	//5
 	onMouseMoveFunc = () => {
@@ -91,13 +91,13 @@ class App extends React.Component {
 	};
 
 	//14
-	hidenImage = () => {
+	hiddenImage = () => {
 		this.setState((state) => {
 			return state.imgDisplay === 'none' ? 
 			{imgDisplay: state.imgDisplay = 'block'} :
 			{imgDisplay: state.imgDisplay = 'none'};
 		})
-	}
+	};
 
 	render() {
 		const divStyle = {
@@ -157,7 +157,7 @@ class App extends React.Component {
 						src={logo} 
 						alt='React logo'
 					 />
-					<button onClick={this.hidenImage} >Hide image</button>
+					<button onClick={this.hiddenImage} >Hide image</button>
 			</div>
 		);
 	}
