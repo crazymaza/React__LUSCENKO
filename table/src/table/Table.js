@@ -10,10 +10,13 @@ class Table extends React.Component {
                     <table>
                         <tbody>
                             {Object.keys(this.props.form).map(key => {
-	                            return <tr key={key}>
-		                            <td>{key}:</td>
-		                            <td>{this.props.form[key]}</td>
-	                            </tr>
+								if(this.props.form[key] !== ''){
+									return <tr key={key}>
+										<td>{key}:</td>
+										<td>{this.props.form[key]}</td>
+									</tr>
+								}
+								return null;
                             })}
                         </tbody>
                     </table>
