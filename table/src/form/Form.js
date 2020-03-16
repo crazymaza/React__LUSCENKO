@@ -7,9 +7,9 @@ class Form extends React.Component {
 		super(props);
 		this.state = {
 			text: '',
-			number: 0,
-			range: 25,
-			textarea: 'Anything about yourself',
+			number: '',
+			range: '',
+			textarea: '',
 			select: '',
 		};
 		this.a = {};
@@ -17,11 +17,12 @@ class Form extends React.Component {
 
 	submitForm = (e) => {
 		e.preventDefault();
-		Object.assign(this.a, this.state);
+		// Object.assign(this.a, this.state);
     };
 
 	changeFormField = (e) => {
 		this.setState({[e.target.name] : e.target.value});
+		// Object.assign(this.a, this.state);
 	};
 
 	render() {
@@ -36,7 +37,7 @@ class Form extends React.Component {
                         min={0}
                         max={50}
                         step={1}
-                        defaultValue={this.state.range}
+                        defaultValue={25}
                         onChange={this.changeFormField}
                     /><br/>
 					<textarea
@@ -48,7 +49,7 @@ class Form extends React.Component {
                         placeholder={'Anything about yourself'}
                         onChange={this.changeFormField}
                     /><br/>
-					<select name='select' id='select' defaultValue={'Choose 1'} onChange={this.changeFormField}>
+					<select name='select' id='select' onChange={this.changeFormField}>
                         <option value='Choose 1'>Choose 1</option>
                         <option value='Choose 2'>Choose 2</option>
                         <option value='Choose 3'>Choose 3</option>
@@ -57,9 +58,7 @@ class Form extends React.Component {
                     </select><br/>
 					<input type='submit' />
 				</form>
-				<Table form = {Object.keys(this.a).length === 0 ?
-					{'':'Таблица ещё не заполнена :'}
-					: this.a}/>
+				<Table form = {this.state}/>
 			</div>
 		);
 	}
