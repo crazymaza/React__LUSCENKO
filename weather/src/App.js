@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Home from './Home/Home';
 import About from './About/About';
 import Contacts from './Contacts/Contacts';
-import Error from './Error/Error';
+import Other from './Other/Other';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 
@@ -27,7 +27,7 @@ class App extends Component {
             <Route exact path='/main' component={Home}/>
             <Route exact path='/about' component={About}/>
             <Route exact path='/contacts' component={Contacts}/>
-            <Route component={Error}/>
+            <Route component={Other}/>
           </Switch>
           <Footer />
       </Router>
